@@ -50,8 +50,8 @@ download:
 # =============================================
 
 brand:            Tan M Vo
-title:            Portfolio
-lead:             UX Designer and Front End Developer from Sydney, Australia.
+title:            Static Site Template
+lead:             Built with Assemble and Bootstrap
 keywords:         <%= pkg.keywords %>
 
 version:          <%= pkg.version %>

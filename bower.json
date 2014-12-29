@@ -1,11 +1,11 @@
 {
-  "name": "tanmvo",
+  "name": "static-site-template",
   "version": "0.0.0",
-  "homepage": "http://tanmvo.com",
+  "homepage": "http://github.com/thetanman/static-site-template",
   "authors": [
     "Tan Vo <tan.m.vo@gmail.com>"
   ],
-  "description": "Tan M Vo Portfolio built in Assemble",
+  "description": "Static Site Template built with Assemble and Bootstrap",
   "main": "index.html",
   "moduleType": [
     "node"
@@ -22,5 +22,8 @@
     "app/bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1"
+  }
 }

@@ -1,15 +1,15 @@
 {
-  "name": "tanmvo",
+  "name": "static-site-template",
   "version": "0.0.0",
-  "description": "Tan M Vo Portfolio built in Assemble",
-  "homepage": "http://tanmvo.com",
-  "main": "dist/index.html",
+  "description": "Static Site Template",
+  "homepage": "http://github.com/thetanman/static-site-template",
+  "main": "index.html",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/thetanman.github.io.git"
+    "url": "http://github.com/thetanman/static-site-template"
   },
   "keywords": [
     "portfolio",
