@@ -20,18 +20,36 @@
         
         
 		
+
 <div class="container">
-	<div class="col-xs-12">
-		<h1>Static Site Template - Tan Vo</h1>
-		<p>A static site template based on Assemble.</p>
-	</div>
+    <div class="xs-col-12">
+        <h2>Static Site Template by Tan Vo</h2>
+        <p>A Static Site Template built with <a href="http://assemble.io">Assemble</a></p>
+    </div>
+</div>
+<div class="container">
+  <div class="xs-col-3">
+    <div id="accordion">
+        <h3>First</h3>
+        <div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
+        <h3>Second</h3>
+        <div>Phasellus mattis tincidunt nibh.</div>
+        <h3>Third</h3>
+        <div>Nam dui erat, auctor a, dignissim quis.</div>
+    </div>
+  </div>
 </div>
         		
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-        <!--<script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/jquery-ui.js"></script>
+        <script>
+            $( "#accordion" ).accordion({
+
+            });
+        </script>
+        <!--<script src="js/main.js"></script>
 
         Google Analytics: change UA-XXXXX-X to be your site's ID. 
         <script>
