@@ -69,7 +69,7 @@ module.exports = function(grunt) {
 			},
 			
 			assemble: {
-				files: ['<%= site.pages %>', '<%= site.data %>/*.json', '<%= site.includes %>'],
+				files: ['<%= site.pages %>', '<%= site.data %>/*.json', '<%= site.includes %>', '<%= site.layouts %>'],
 				tasks: ['assemble']
 			},
 
@@ -80,10 +80,6 @@ module.exports = function(grunt) {
 					livereload: false,
 				}
 			},
-
-			// css: {
-			// 	files: ['<%= site.assets %>/css/*.css'],
-			// },
 
 			livereload: {
 		        options: {
@@ -100,7 +96,6 @@ module.exports = function(grunt) {
 	});
 	
 	grunt.loadNpmTasks('assemble');
-	// grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-concurrent');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-connect');
