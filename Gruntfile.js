@@ -5,22 +5,6 @@ module.exports = function(grunt) {
 		site: grunt.file.readYAML('_config.yaml'),
 		
 		assemble: {
-		
-		  projects: {
-	        src: ['<%= site.projects %>'],
-	        dest: '<%= site.dest %>/projects/',
-	        options: {
-		        flatten: true,
-		        assets: '<%= site.assets %>',
-		        data: '<%= site.data %>/*.{json,yml}',
-
-		        // Templates
-		        partials: '<%= site.includes %>',
-		        layoutdir: '<%= site.layouts %>',
-		        layout: 'project.hbs',
-	    	},
-	      },
-
 	      site: {
 	        src: ['<%= site.pages %>'],
 	        dest: '<%= site.dest %>',
@@ -43,29 +27,12 @@ module.exports = function(grunt) {
 
 		},
 
-		// browserSync: {
-			
-		// 	bsFiles: {
-		//         src : ['<%= site.pages %>', '<%= site.dest %>/projects/*.html', '<%= site.assets %>/css/*.css']
-		//     },
-		    
-		//     options: {
-		//         server: {
-		//             baseDir: "<%= site.dest %>",
-		//             tunnel: false,
-		//             injectChanges: true,
-		//         },
-		//         watchTask: true,
-		//     }
-
-		// },
-
 		clean: {
-			server: ['<%= assemble.projects.dest %>', '<%= site.assets %>', '!<%= site.assets %>' ]
+			server: ['<%= site.assets %>', '!<%= site.assets %>' ]
 		},
 
 		concurrent: {
-			server: ['less', 'assemble:site', 'assemble:projects'],
+			server: ['less', 'assemble:site'],
 		},
 
 		connect: {
@@ -96,32 +63,13 @@ module.exports = function(grunt) {
 			},
 		},
 
-		replace: {
-			// dist: {
-			// 	options: {
-			// 		patterns: [
-			// 			{
-			// 				match: "href=\"/\"",
-			// 				replacement: "href=\"http://www.tanmvo.com\""
-			// 			}
-			// 		]
-			// 	},
-			// 	files: {
-			// 		expand: true,
-			// 		flatten: true,
-			// 		src: ['<%= site.dest %>/index.html'],
-			// 		dest: '<%= site.dest %>'
-			// 	}
-			// }
-		},
-
 		watch: {
 			options: {
 				livereload: true,
 			},
 			
 			assemble: {
-				files: ['<%= site.pages %>', '<%= site.data %>/*.json', '<%= site.includes %>', '<%= site.projects %>' ],
+				files: ['<%= site.pages %>', '<%= site.data %>/*.json', '<%= site.includes %>'],
 				tasks: ['assemble']
 			},
 
@@ -143,7 +91,6 @@ module.exports = function(grunt) {
 		        },
 		        files: [
 		          '<%= site.dest %>/*.html',
-		          '<%= site.projects %>/*.html',
 		          '<%= site.assets %>/css/*.css',
 		          '<%= site.assets %>/img/*.{gif,jpg,jpeg,png,svg,webp}'
 		        ]
@@ -158,7 +105,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-less');
-	grunt.loadNpmTasks('grunt-replace');
+	grunt.loadNpmTasks('grunt-text-replace');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('default', ['clean', 'concurrent:server', 'connect', 'watch']);
