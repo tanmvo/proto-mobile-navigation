@@ -35,6 +35,16 @@ module.exports = function(grunt) {
 			server: ['less', 'assemble:site'],
 		},
 
+		copy: {
+			js: {
+				expand: true,
+				cwd: 'src/js/',
+				flatten: true,
+				src: 'main.js', 
+				dest: '<%= site.assets %>/js/'
+			}
+		},
+
 		connect: {
 	      options: {
 	        port: 9000,
@@ -73,6 +83,11 @@ module.exports = function(grunt) {
 				tasks: ['assemble']
 			},
 
+			js: {
+				files: ['src/js/main.js'],
+				tasks: ['copy:js']
+			},
+
 			less: {
 				files: ['src/less/**/*.less'],
 				tasks: ['less'],
@@ -99,11 +114,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-concurrent');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-text-replace');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['clean', 'concurrent:server', 'connect', 'watch']);
+	grunt.registerTask('default', ['clean', 'copy', 'concurrent:server', 'connect', 'watch']);
 	grunt.registerTask('dist', ['clean', 'assemble', 'replace:dist']);
 }
 
