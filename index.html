@@ -12,72 +12,78 @@
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         
-        	  <link rel="stylesheet" href="assets/css/main.css"> 
+        <link rel="stylesheet" href="assets/css/main.css"> 
 		
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
     </head>
     <body>
         
-        <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    
-  </div><!-- /.container-fluid -->
-</nav>
-<nav class="navigation" role="navigation">
-  <ul>
+        <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+  <ul class="nav navmenu-nav">
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">New Arrivals</a>
-      <ul class="dropdown-menu">
-        <li>Womens</li>
-        <li>Mens</li>
+      <ul class="dropdown-menu navmenu-nav">
+        <li><a href="#">Womens</a></li>
+        <li><a href="#">Mens</a></li>
       </ul>
     </li>
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Women</a>
-      <ul class="dropdown-menu">
-        <li>New Arrivals</li>
-        <li>Dresses</li>
-        <li>Knits</li>
-        <li>Shirts</li>
-        <li>Accessories</li>
+      <ul class="dropdown-menu navmenu-nav">
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Dresses</a></li>
+        <li><a href="#">Knits</a></li>
+        <li><a href="#">Shirts</a></li>
+        <li><a href="#">Accessories</a></li>
       </ul>
     </li>
     <li>
-      Men
-      <li>New Arrivals</li>
-        <li>Shirts</li>
-        <li>Pants</li>
-        <li>Jackets</li>
-        <li>Accessories</li>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Men</a>
+      	<ul class="dropdown-menu navmenu-nav">
+	      	<li><a href="#">New Arrivals</a></li>
+	        <li><a href="#">Shirts</a></li>
+	        <li><a href="#">Pants</a></li>
+	        <li><a href="#">Jackets</a></li>
+	        <li><a href="#">Accessories</a></li>
+        </ul>
     </li>
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Accessories</a>
-      <ul class="dropdown-menu">
-        <li>Womens</li>
-        <li>Mens</li>
+      <ul class="dropdown-menu navmenu-nav">
+        <li><a href="#">Womens</a></li>
+        <li><a href="#">Mens</a></li>
       </ul>
     </li>
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sale</a>
-      <ul class="dropdown-menu">
-        <li>Womens</li>
-        <li>Mens</li>
+      <ul class="dropdown-menu navmenu-nav">
+        <li><a href="#">Womens</a></li>
+        <li><a href="#">Mens</a></li>
       </ul>
     </li>
   </ul>
 </nav>
+<div class="navbar navbar-default navbar-fixed-top" style="text-align: center;">
+  
+  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body" style="float: left; margin-left: 15px; margin-right: 0px;">
+    <span class="glyphicon glyphicon-menu-hamburger"></span>
+  </button>
+  
+  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body" style="float: left; margin-left: 15px; margin-right: 0px;">
+    <span class="glyphicon glyphicon-map-marker"></span>
+  </button>
+  <a href="" style="font-size: 20px; display: inline-block;">Brand</a>
+
+  
+  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+    <span class="glyphicon glyphicon-shopping-cart"></span>
+  </button>
+
+  
+  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+    <span class="glyphicon glyphicon-search"></span>
+  </button>
+</div>
 		
 <div class="container">
 	<div class="col-xs-12">
@@ -89,7 +95,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+    <script type="text/javascript">
+        // $('.navmenu').offcanvas({
+        //     // placement: 'left'
+        // });
+    </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

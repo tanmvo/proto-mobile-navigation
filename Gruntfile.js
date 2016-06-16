@@ -38,11 +38,18 @@ module.exports = function(grunt) {
 		copy: {
 			js: {
 				expand: true,
+				cwd: './bower_components/bootstrap/fonts',
+				flatten: true,
+				src: '*', 
+				dest: '<%= site.assets %>/fonts/'
+			},
+			fonts: {
+				expand: true,
 				cwd: 'src/js/',
 				flatten: true,
 				src: 'main.js', 
-				dest: '<%= site.assets %>/js/'
-			}
+				dest: '<%= site.assets %>/fonts/'
+			},
 		},
 
 		connect: {
