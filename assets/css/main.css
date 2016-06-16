@@ -6724,24 +6724,3 @@ button.close {
     display: none !important;
   }
 }
-.navbar-head {
-  text-align: center;
-}
-.navbar-logo {
-  display: inline-block;
-  font-size: 18px;
-  padding: 11px;
-}
-.navbar-toggle {
-  margin: 0;
-  float: none;
-}
-.navbar-btn {
-  display: inline-block;
-}
-.left {
-  float: left;
-}
-.right {
-  float: right;
-}
