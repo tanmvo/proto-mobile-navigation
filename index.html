@@ -223,16 +223,15 @@
 				<a href="#" title=""><span class="glyphicon glyphicon-map-marker"></span></a>
 			</div>
 			<div class="header-menu right">
-				<a href="#" title=""><span class="glyphicon glyphicon-search"></span></a>
+				<a href="#" title="" class="toggle-search"><span class="glyphicon glyphicon-search"></span></a>
 				<a href="#" title="" class="toggle-cart"><span class="glyphicon glyphicon-shopping-cart"></span> 3</a>
 			</div>
 			<div class="brand">Brand</div>
 		</header>
 		<div class="search">
-  <form>
     <input type="text" placeholder="Search" />
     <input type="submit">
-  </form>
+    <a href="#" class="toggle-search"><span class="glyphicon glyphicon-remove"></span> Close</a>
 </div>
 		<h1 class="text-center">Hello</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -276,6 +275,9 @@
             $('.toggle-cart').click(function() {
                 toggleCart();
             });
+            $('.toggle-search').click(function() {
+                $('.search').toggle();
+            })
         });
 
         function toggleNav() {
@@ -297,6 +299,7 @@
                 $('#site-menu').hide();
             }
         }
+
     </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
         <script>

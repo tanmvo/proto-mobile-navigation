@@ -6827,4 +6827,5 @@ header {
 \*------------------------------------*/
 .search {
   padding: 15px 0px;
+  display: none;
 }
