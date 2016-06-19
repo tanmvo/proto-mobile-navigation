@@ -18,7 +18,6 @@
     </head>
     <body>
         
-        {{> navigation }}
 		{{> body }}
         {{> footer }}		
 
@@ -31,13 +30,28 @@
             $('.toggle-nav').click(function() {
                 toggleNav();
             });
+            $('.toggle-cart').click(function() {
+                toggleCart();
+            });
         });
 
         function toggleNav() {
             if ($('#site-wrapper').hasClass('show-nav')) {
                 $('#site-wrapper').removeClass('show-nav');
+                $('#site-cart').show();
             } else {
                 $('#site-wrapper').addClass('show-nav');
+                $('#site-cart').hide();
+            }
+        }
+
+        function toggleCart() {
+            if ($('#site-wrapper').hasClass('show-cart')) {
+                $('#site-wrapper').removeClass('show-cart');
+                $('#site-menu').show();
+            } else {
+                $('#site-wrapper').addClass('show-cart');
+                $('#site-menu').hide();
             }
         }
     </script>

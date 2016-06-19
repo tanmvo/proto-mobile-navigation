@@ -2,25 +2,42 @@
 	box-sizing: border-box;
 }
 
+
+
+
+
+header {
+  background: #efefef;
+  margin-top:   -15px;
+  margin-left:  -15px;
+  margin-right: -15px;
+  padding:      15px;
+}
+
+
+
+
+
 #site-wrapper {
 	position: relative;
 	overflow: hidden;
 	width: 	100%;
-
-	height: 2000px; // Simulates a tall page
+	height: 100%; // Simulates a tall page
 }
+
 
 #site-canvas {
 	width: 	100%;
 	height: 100%;
 	background: #fff;
 	position: relative;
-	-webkit-transform: 	translateX(0);
-	transform: 			translateX(0);
-	-webkit-transition: .2s ease all;
-	transition: 		.2s ease all;
+	-webkit-transform: 	 translateX(0);
+	transform: 			     translateX(0);
+	-webkit-transition:  .2s ease all;
+	transition: 		     .2s ease all;
 	padding: 15px;
 }
+
 
 #site-menu {
 	width: 	260px;
@@ -32,16 +49,90 @@
 	padding: 0 15px;
 }
 
+
+#site-cart {
+  width:    260px;
+  height:   100%;
+  position: absolute;
+  top:      0px;
+  right:    0px;
+  background: #efefef;
+  padding:  0 15px;
+}
+
+    .cart-message {  margin: 20px 0;  }
+    
+
+    .cart-container { margin: 20px 0; }
+    
+    .subtotal {
+      margin: 20px 0px;
+      font-weight: bold;
+    }
+
+
+    .btn-cart {
+      width: 100%;
+    }
+
+
+
 #site-wrapper.show-nav #site-canvas {
 	-webkit-transform: 	translateX(260px);
-	transform:			translateX(260px);
-	overflow-y: hidden;
+	transform:			    translateX(260px);
+  position: fixed;
 }
 
-.left {
-	float: left;
+
+#site-wrapper.show-cart #site-canvas {
+  -webkit-transform:  translateX(-260px);
+  transform:          translateX(-260px);
+  position: fixed;
 }
 
-.right {
-	float: right;
+
+.brand {
+  margin-left:    auto;
+  margin-right:   auto;
+  text-align: center;
 }
+
+.left {	float: left; }
+
+.right { float: right; }
+
+
+
+
+
+
+/*------------------------------------*\
+    # Product Tile
+\*------------------------------------*/
+
+.product-container { margin: 20px 0; }
+
+  .product { 
+    width: 100%;
+    display: block;
+    clear: both;
+    margin-bottom: 10px;
+  }
+
+    .product-image {
+      padding: 0 10px;
+      float: left;
+    }
+
+    .product-description { padding: 0 10px; }
+
+
+
+
+
+/*------------------------------------*\
+    # Search
+\*------------------------------------*/
+
+
+.search { padding: 15px 0px; }
