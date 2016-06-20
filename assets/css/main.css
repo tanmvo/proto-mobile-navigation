@@ -6825,7 +6825,18 @@ header {
 /*------------------------------------*\
     # Search
 \*------------------------------------*/
-.search {
-  padding: 15px 0px;
+.search-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  padding: 15px;
+  opacity: 0.9;
   display: none;
+}
+.search {
+  display: none;
+  background: #fff;
 }
